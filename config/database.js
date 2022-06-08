@@ -1,6 +1,6 @@
 const {
-  DB_USER = "",
-  DB_PASSWORD = "",
+  DB_USER = "postgres",
+  DB_PASSWORD = "nanasenak567",
   DB_NAME = "bcr",
   DB_HOST = "127.0.0.1",
   DB_PORT = "5432",
@@ -10,25 +10,28 @@ module.exports = {
   development: {
     username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_development`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres"
+    dialect: "postgres",
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
   },
   test: {
     username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_test`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres"
+    dialect: "postgres",
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
   },
   production: {
     username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_production`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres"
-  }
-}
+    dialect: "postgres",
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+  },
+};
