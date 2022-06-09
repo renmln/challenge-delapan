@@ -1,10 +1,10 @@
 const {
-  DB_USER = "postgres",
-  DB_PASSWORD = "nanasenak567",
-  DB_NAME = "bcr",
-  DB_HOST = "127.0.0.1",
-  DB_PORT = "5432",
-} = process.env;
+  DB_USER = '',
+  DB_PASSWORD = '',
+  DB_NAME = 'bcr',
+  DB_HOST = '127.0.0.1',
+  DB_PORT = '5432'
+} = process.env
 
 module.exports = {
   development: {
@@ -13,8 +13,8 @@ module.exports = {
     database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres",
-    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+    dialect: 'postgres',
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }
   },
   test: {
     username: DB_USER,
@@ -22,8 +22,8 @@ module.exports = {
     database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres",
-    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+    dialect: 'postgres',
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }
   },
   production: {
     username: DB_USER,
@@ -31,7 +31,7 @@ module.exports = {
     database: `${DB_NAME}`,
     host: DB_HOST,
     port: DB_PORT,
-    dialect: "postgres",
-    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-  },
-};
+    dialect: 'postgres',
+    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }
+  }
+}
